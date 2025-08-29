@@ -1,0 +1,32 @@
+.ngptc-wrap { display: grid; gap: 8px; margin: 6px 0; }
+.ngptc-body { display: grid; gap: 8px; }
+.row { display: flex; align-items: center; gap: 8px; }
+.sub { width: 160px; }
+
+.ngptc-hotspot {
+  position: fixed; right: 8px; bottom: 8px; z-index: 7000;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: rgba(0,0,0,0); border: 1px dashed rgba(255,255,255,0.0);
+  transition: opacity .15s ease, background .15s ease, border-color .15s ease;
+}
+.ngptc-hotspot:hover {
+  background: rgba(0,0,0,.18);
+  border-color: rgba(255,255,255,.25);
+  opacity: .95;
+  backdrop-filter: blur(3px);
+}
+
+.ngptc-card {
+  position: fixed; right: 8px; bottom: 20px; z-index: 7000;
+  width: 300px; max-width: 92vw;
+  border-radius: 12px; padding: 10px;
+  background: rgba(0,0,0,.35); color: inherit;
+  border: 1px solid rgba(255,255,255,.18);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 28px rgba(0,0,0,.35);
+  opacity: 0; pointer-events: none; transform: translateY(6px); 
+  transition: opacity .15s ease, transform .15s ease;
+}
+.ngptc-card.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+.ngptc-title { font-weight: 700; margin-bottom: 6px; opacity: .9; }
